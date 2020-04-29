@@ -5,9 +5,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag "application", media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
-
+    
     <%# 
       above 👆 we are including the JavaScript code in the app.
       javascript_pack_tag is a helper method that's provided by
@@ -18,7 +18,7 @@
       as well as in production mode similar to the assets pipeline.
      %>
 
-     
+
   </head>
 
   <body>
