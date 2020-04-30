@@ -23,6 +23,16 @@ class Question < ApplicationRecord
     # that no longer exist, likely leading to errors. 
     # Always set a dependent option to help maintain
     # referential integrity.
+    has_and_belongs_to_many(
+        :liked_questions,
+        {
+          class_name: 'User',
+          join_table: 'likes',
+          association_foreign_key: 'user_id',
+          foreign_key: 'question_id'
+        }
+    )
+
 
 
     belongs_to :user
